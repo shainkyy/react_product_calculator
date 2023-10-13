@@ -2,7 +2,7 @@
     background-color: aquamarine;
 }
 .navbar-background{
-    background-color: #2ababa !important;
+    background-color: #000000 !important;
 }
 .navbar-background a{
     color: antiquewhite;
@@ -17,4 +17,13 @@
 }
 .bottom-border{
     border-bottom: 3px solid black;
+}
+.no-border{
+    border: none;
+}
+.Card-Shadow{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.pointer-cursour{
+    cursor: pointer;
 }
