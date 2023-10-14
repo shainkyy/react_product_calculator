@@ -10,8 +10,8 @@ export class App extends Component {
     return (
       <React.Fragment>
         <NavBar />
-        <Login />
         <CustomersList />
+        <Login />
         <TaskQuantity />
         <MainContent />
       </React.Fragment>
