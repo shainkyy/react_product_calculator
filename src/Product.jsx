@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 
 export class Product extends Component {
-  state = {
-    product: this.props.product,
-  };
+  constructor(props) {
+    console.log("child-constructor");
+    super(props);
+    this.state = {
+      product: this.props.product,
+    };
+  }
 
   render() {
+    console.log("child-render");
     return (
       <div className="col">
         <div className="card h-100 Card-Shadow">
@@ -25,7 +30,7 @@ export class Product extends Component {
                     {this.state.product.price}
                   </span>
                   <span
-                    className="p-2 pointer-cursour"
+                    className="p-2 pointer-cursour text-danger"
                     onClick={() => {
                       this.props.OnDelete(this.state.product);
                     }}
@@ -78,4 +83,7 @@ export class Product extends Component {
       </div>
     );
   }
+  componentDidMount = () => {
+    console.log("child-compponentdidmount");
+  };
 }
