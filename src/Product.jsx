@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export class Product extends Component {
   constructor(props) {
-    console.log("child-constructor");
+    // console.log("child-constructor");
     super(props);
     this.state = {
       product: this.props.product,
@@ -10,7 +10,7 @@ export class Product extends Component {
   }
 
   render() {
-    console.log("child-render");
+    // console.log("child-render");
     return (
       <div className="col">
         <div className="card h-100 Card-Shadow">
@@ -84,6 +84,6 @@ export class Product extends Component {
     );
   }
   componentDidMount = () => {
-    console.log("child-compponentdidmount");
+    // console.log("child-compponentdidmount");
   };
 }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Product } from "./Product";
 export class CustomersList extends Component {
   constructor(props) {
-    console.log("constructor----Customerlits");
+    // console.log("constructor----Customerlits");
     super(props);
     this.state = {
       product: [
@@ -95,7 +95,7 @@ export class CustomersList extends Component {
   }
 
   render() {
-    console.log("render----Customerlits");
+    // console.log("render----Customerlits");
     return (
       <div className="container">
         <h3>Shopping Cart</h3>
@@ -121,20 +121,20 @@ export class CustomersList extends Component {
   }
 
   componentDidMount = () => {
-    console.log("componentDidMount----Customerlits");
+    // console.log("componentDidMount----Customerlits");
   };
 
   componentDidUpdate = (prevProps, prevState) => {
-    console.log(this.state.product);
-    console.log(prevProps);
-    console.log(this.props);
-    console.log("componentDidUpdate----Customerlits", prevState.product);
+    // console.log(this.state.product);
+    // console.log(prevProps);
+    // console.log(this.props);
+    // console.log("componentDidUpdate----Customerlits", prevState.product);
   };
 
   componentDidCatch = (error, info) => {
-    console.log("componentdidcatch");
-    console.log(error, info);
-    localStorage.lastErr = `${error}\n${JSON.stringify(info)}`;
+    // console.log("componentdidcatch");
+    // console.log(error, info);
+    // localStorage.lastErr = `${error}\n${JSON.stringify(info)}`;
   };
 
   handelIncrement = (currentprod, max) => {
