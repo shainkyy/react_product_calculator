@@ -3,11 +3,7 @@ import React, { Component } from "react";
 export class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      email: "abs@gmail.com",
-      password: "password",
-      message: "",
-    };
+    this.state = {};
   }
 
   render() {
@@ -65,11 +61,15 @@ export class Login extends Component {
     );
   }
 
-  onLoginClick = () => {
-    let email = this.state.email;
-    let password = this.state.password;
-
-    if (email === "abs@gmail.com" && password === "password") {
+  onLoginClick = async () => {
+    let response = await fetch(
+      `http://localhost:5000/users?email=${this.state.email}&password=${this.state.password}`,
+      {
+        method: "GET",
+      }
+    );
+    let body = await response.json();
+    if (body.length > 0) {
       this.setState({
         message: (
           <div className="alert alert-success" role="alert">
